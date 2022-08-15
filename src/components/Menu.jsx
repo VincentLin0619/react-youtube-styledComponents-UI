@@ -20,11 +20,12 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 
 const Container = styled.div`
   flex: 1.5;
-  color: whitesmoke;
+  background-color: ${({ theme }) => theme.bgLight};
+  color: ${({ theme }) => theme.text};
   font-size: 14px;
-  background-color: #202020;
   position: sticky;
-  height: 100%;
+  top: 0;
+  height: 100vh;
   width: 100%;
 `;
 const Wrapper = styled.div`
@@ -41,11 +42,11 @@ const Item = styled.div`
   }
 `;
 const Hr = styled.hr`
-  margin: 15px 0px;
+  margin: 5px 0px 5px 0px;
   border: 0.5px solid ${({ theme }) => theme.soft};
 `;
 const Login = styled.div``;
-const Button = styled.div`
+const Button = styled.button`
   padding: 5px 15px;
   background-color: transparent;
   border: 1px solid #3ea6ff;
@@ -54,6 +55,9 @@ const Button = styled.div`
   font-weight: 500;
   margin-top: 10px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 `;
 
 const Logo = styled.div`
@@ -74,7 +78,7 @@ const Img = styled.img`
   height: 25px;
 `;
 
-const Menu = () => {
+const Menu = ({ mode, setMode }) => {
   return (
     <Container>
       <Wrapper>
@@ -105,7 +109,7 @@ const Menu = () => {
         </Item>
         <Hr />
         <Login>
-          Login
+          Sign in to like videos, comment, and subscribe.
           <Button>登入</Button>
         </Login>
         <Hr />
@@ -147,7 +151,7 @@ const Menu = () => {
           <HelpOutlineOutlinedIcon />
           幫助
         </Item>
-        <Item>
+        <Item onClick={() => setMode(!mode)}>
           <SettingsBrightnessOutlinedIcon />
           明亮模式
         </Item>
