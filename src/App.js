@@ -1,22 +1,24 @@
-import "./App.css";
+import styled from "styled-components";
+import Menu from "./components/Menu";
+import Navbar from "./components/Navbar";
 
+const Container = styled.div`
+  display: flex;
+  margin: 0;
+`;
+const Main = styled.div`
+  flex: 7;
+`;
+const Wrapper = styled.div``;
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      <Menu />
+      <Main>
+        <Navbar />
+        <Wrapper>Video Cards</Wrapper>
+      </Main>
+    </Container>
   );
 }
 
