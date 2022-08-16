@@ -9,6 +9,6 @@ export const lightTheme = {
   bg: "f9f9f9",
   bgLight: "white",
   text: "black",
-  textSoft: "#606060",
+  textSoft: "#555555",
   soft: "#f5f5f5",
 };

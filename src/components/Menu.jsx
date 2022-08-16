@@ -21,12 +21,11 @@ import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightne
 const Container = styled.div`
   flex: 1.5;
   background-color: ${({ theme }) => theme.bgLight};
+  transition: 500ms;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
-  top: 0;
-  height: 100vh;
-  width: 100%;
+  height: 100%;
 `;
 const Wrapper = styled.div`
   padding: 18px 26px;
@@ -110,7 +109,10 @@ const Menu = ({ mode, setMode }) => {
         <Hr />
         <Login>
           Sign in to like videos, comment, and subscribe.
-          <Button>登入</Button>
+          <Button>
+            <AccountCircleOutlinedIcon />
+            登入
+          </Button>
         </Login>
         <Hr />
         <Title>BEST OF LAMATUBE</Title>
@@ -153,7 +155,7 @@ const Menu = ({ mode, setMode }) => {
         </Item>
         <Item onClick={() => setMode(!mode)}>
           <SettingsBrightnessOutlinedIcon />
-          明亮模式
+          切換主題
         </Item>
       </Wrapper>
     </Container>
