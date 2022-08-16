@@ -19,6 +19,7 @@ const Wrapper = styled.div`
   position: relative;
 `;
 const Search = styled.div`
+  background-color: ${({ theme }) => theme.bg};
   width: 40%;
   position: absolute;
   color: ${({ theme }) => theme.textSoft};

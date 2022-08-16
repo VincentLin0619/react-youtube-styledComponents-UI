@@ -16,7 +16,9 @@ const Main = styled.div`
   background-color: ${({ theme }) => theme.bg};
   transition: 500ms;
 `;
-const Wrapper = styled.div``;
+const Wrapper = styled.div`
+  padding: 22px 96px;
+`;
 function App() {
   const [mode, setkMode] = useState(true);
   return (

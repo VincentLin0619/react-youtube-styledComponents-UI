@@ -17,15 +17,17 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import FlagOutlinedIcon from "@mui/icons-material/FlagOutlined";
 import HelpOutlineOutlinedIcon from "@mui/icons-material/HelpOutlineOutlined";
 import SettingsBrightnessOutlinedIcon from "@mui/icons-material/SettingsBrightnessOutlined";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
-  flex: 1.5;
+  flex: 1;
   background-color: ${({ theme }) => theme.bgLight};
   transition: 500ms;
   color: ${({ theme }) => theme.text};
   font-size: 14px;
   position: sticky;
-  height: 100%;
+  height: 100vh;
+  top: 0px;
 `;
 const Wrapper = styled.div`
   padding: 18px 26px;
@@ -81,10 +83,12 @@ const Menu = ({ mode, setMode }) => {
   return (
     <Container>
       <Wrapper>
-        <Logo>
-          <Img src={Logotube} />
-          Demo
-        </Logo>
+        <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+          <Logo>
+            <Img src={Logotube} />
+            Demo
+          </Logo>
+        </Link>
         <Item>
           <HomeRoundedIcon />
           首頁

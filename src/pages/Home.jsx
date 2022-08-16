@@ -3,6 +3,7 @@ import Card from "../components/Card";
 import styled from "styled-components";
 
 const Container = styled.div`
+  justify-content: space-between;
   display: flex;
   flex-wrap: wrap;
 `;
