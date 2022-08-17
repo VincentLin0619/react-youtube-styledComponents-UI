@@ -48,17 +48,19 @@ const Info = styled.div`
   color: ${({ theme }) => theme.textSoft};
 `;
 
-export default function Card() {
+export default function Card({ type }) {
   return (
     <Link to="video/test" style={{ textDecoration: "none" }}>
-      <Container>
-        <Image />
-        <ChannelImage></ChannelImage>
-        <Texts>
-          <Title>影片標題</Title>
-          <ChannelName>頻道名稱</ChannelName>
-          <Info>觀看次數：666・兩年前</Info>
-        </Texts>
+      <Container type={type}>
+        <Image type={type} />
+        <Details type={type}>
+          <ChannelImage type={type} />
+          <Texts>
+            <Title>影片標題</Title>
+            <ChannelName>頻道名稱</ChannelName>
+            <Info>觀看次數：666・兩年前</Info>
+          </Texts>
+        </Details>
       </Container>
     </Link>
   );

@@ -112,11 +112,13 @@ const Menu = ({ mode, setMode }) => {
         </Item>
         <Hr />
         <Login>
-          Sign in to like videos, comment, and subscribe.
-          <Button>
-            <AccountCircleOutlinedIcon />
-            登入
-          </Button>
+          註冊以收藏影片，回覆，訂閱
+          <Link to="SignIn" style={{ textDecoration: "none" }}>
+            <Button>
+              <AccountCircleOutlinedIcon />
+              登入
+            </Button>
+          </Link>
         </Login>
         <Hr />
         <Title>BEST OF LAMATUBE</Title>
