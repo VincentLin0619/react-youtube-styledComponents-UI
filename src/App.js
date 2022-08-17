@@ -14,7 +14,7 @@ const Container = styled.div`
 const Main = styled.div`
   flex: 7;
   background-color: ${({ theme }) => theme.bg};
-  transition: 500ms;
+  transition: 600ms;
 `;
 const Wrapper = styled.div`
   padding: 22px 96px;

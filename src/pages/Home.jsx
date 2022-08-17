@@ -8,28 +8,19 @@ const Container = styled.div`
   flex-wrap: wrap;
 `;
 
+const CardList = () => {
+  const cardList = [];
+  let count = 20;
+  for (let i = 0; i < count; i++) {
+    cardList.push(<Card key={i} />);
+  }
+  return cardList;
+};
+
 export default function Home() {
   return (
     <Container>
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      <CardList />
     </Container>
   );
 }
